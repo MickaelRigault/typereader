@@ -19,7 +19,7 @@ Each Typing method has its own Reader object. For instance SNID has a `SNIDReade
 In that example, you can load `transientX_snid.output` (which is a typing file of the spectrum associated with the target `transientX` files as follows:
 ```python
 import typereader
-snid = typereader.load_snidreader("supernovablabla_snid.output", targetname="transientX")
+snid = typereader.load_snidreader("transientX_snid.output", targetname="transientX")
 ```
 
 To vizualize the output simply use:
