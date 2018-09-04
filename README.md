@@ -16,10 +16,10 @@ python setup.py install
 ## Usage
 Each Typing method has its own Reader object. For instance SNID has a `SNIDReader` object. 
 
-In that example, you can load `supernovablabla_snid.output` (which is a typing file of the spectrum associated with the target `supernovablabla` files as follows:
+In that example, you can load `transientX_snid.output` (which is a typing file of the spectrum associated with the target `transientX` files as follows:
 ```python
 import typereader
-snid = typereader.load_snidreader("supernovablabla_snid.output", targetname="supernovablabla")
+snid = typereader.load_snidreader("supernovablabla_snid.output", targetname="transientX")
 ```
 
 To vizualize the output simply use:
