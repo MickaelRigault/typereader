@@ -18,7 +18,9 @@ To vizualize the output simply use:
 snid.show()
 ```
 If will output something like this in the case on a unclear classification:
+
 ![](examples/figures/Transient1.png)
 
 Or this for a clear "Ia" typing:
+
 ![](examples/figures/Transient2.png)
