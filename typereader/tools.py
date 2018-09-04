@@ -81,7 +81,7 @@ def spiderplot(categories, values, ax=None,
     if ax is None:
         fig = mpl.figure(figsize=[3,3.5])
         ax  = fig.add_axes([0.1,0.12,0.8,0.7], polar=True, 
-                           facecolor=mpl.cm.binary(0.7,0.05) if axfc is None else axfc,
+                           facecolor=axfc,
                                zorder=1)
     else:
         ax  = ax

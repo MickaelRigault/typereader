@@ -85,7 +85,8 @@ class SNIDReader( object ):
                 dicval[tlist] = getattr(np, npfunc)(values_key[:nfirst][flagin]) if np.any(flagin) else 0
         return dicval
     
-    def show(self, savefile=None, highlight_subtype=False, **kwargs):
+    def show(self, savefile=None, highlight_subtype=False, nfirst=10, npfunc="mean",
+                 **kwargs):
         """ 
         Parameters
         ----------
@@ -97,7 +98,7 @@ class SNIDReader( object ):
         """
         from .tools import spiderplot
         # Data
-        dictvalues = self.get_rlapvalues(**kwargs) 
+        dictvalues = self.get_rlapvalues(npfunc=npfunc,nfirst=nfirst) 
         values=[dictvalues[c] for c in self.categories]
         
         rarray = np.asarray([4, 8, 12, 16])
@@ -105,7 +106,9 @@ class SNIDReader( object ):
             rarray *= self.nfirst
             
         # Spider Plot #
-        dictout = spiderplot(self.categories, values, rarray=rarray)
+        dictout = spiderplot(self.categories, values, rarray=rarray, **kwargs)
+
+        
         fig = dictout["fig"]
         ax  =  dictout["ax"]
         highlight = dictout["highlight"]
