@@ -4,7 +4,7 @@ Simple tool to read SN typing algorithms output  (e.g. SNID)
 _the code should work on python 2.7 and 3.X (tested only on 3.6)_
 ## Installation
 ```bash
-git clone 
+git clone https://github.com/MickaelRigault/typereader.git
 cd typereader
 python setup.py install
 ```
