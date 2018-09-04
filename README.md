@@ -26,7 +26,6 @@ To vizualize the output simply use:
 ```python
 snid.show()
 ```
-If will output something like this in the case on a unclear classification:
 
 ![](examples/figures/Transient1.png)
 
