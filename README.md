@@ -1,2 +1,2 @@
 # typereader
-Simple tool to read SN typing algorithm output  (e.g. SNID)
+Simple tool to read SN typing algorithms output  (e.g. SNID)
