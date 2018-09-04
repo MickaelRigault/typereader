@@ -16,7 +16,7 @@ python setup.py install
 ## Usage
 Each Typing method has its own Reader object. For instance SNID has a `SNIDReader` object. 
 
-In that example, you can load `transientX_snid.output` (which is a typing file of the spectrum associated with the target `transientX` files as follows:
+In that example, you can load `transientX_snid.output` file as follows (output file from snid):
 ```python
 import typereader
 snid = typereader.load_snidreader("transientX_snid.output", targetname="transientX")
