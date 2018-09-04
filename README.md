@@ -33,3 +33,13 @@ If will output something like this in the case on a unclear classification:
 Or this for a clear "Ia" typing:
 
 ![](examples/figures/Transient2.png)
+
+### Visualize subtypes
+
+For the cases where only 1 transient type is associated to the transient, the `show()` method option `highlight_subtype` enables you to visualize the subtypes, as illustrated below (the width is proportional to the number of entries corresponding to the displayed subtypes):
+
+
+```python
+snid.show(highlight_subtype=True)
+```
+![](examples/figures/Transient2_withsubtypes.png)
