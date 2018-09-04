@@ -67,6 +67,7 @@ def spiderplot(categories, values, ax=None,
     if highlight_unique:
         flagnonzero = np.asarray(values)>0 
         highlight = np.argwhere(flagnonzero)[0] if np.sum(flagnonzero) == 1 else None
+        lcolor = "0.5"
     else:
         highlight = None
         
@@ -80,7 +81,8 @@ def spiderplot(categories, values, ax=None,
     if ax is None:
         fig = mpl.figure(figsize=[3,3.5])
         ax  = fig.add_axes([0.1,0.12,0.8,0.7], polar=True, 
-                           facecolor=mpl.cm.binary(0.7,0.05) if axfc is None else axfc)
+                           facecolor=mpl.cm.binary(0.7,0.05) if axfc is None else axfc,
+                               zorder=1)
     else:
         ax  = ax
         fig = ax.figure
@@ -98,6 +100,9 @@ def spiderplot(categories, values, ax=None,
         xtick.set_color(highlight_color)
         xtick.set_weight("bold")
         xtick.set_size(xtick.get_size()*1.2)
+            
+
+        
         # Draw ylabels
     ax.set_rlabel_position(0)
         
@@ -127,4 +132,4 @@ def spiderplot(categories, values, ax=None,
     if title is not None:
         ax.set_title(title, size=titlesize, color=titlecolor)
         
-    return {"ax":ax, "fig":fig}
+    return {"ax":ax, "fig":fig, "highlight":highlight}
